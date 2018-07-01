@@ -5,6 +5,8 @@
   "main": "app.js",
   "scripts": {
     "gulp": "gulp",
+    "build-dev":"set NODE_ENV=development && gulp",
+    "build-pro":"set NODE_ENV=production && gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "takuya shimobayashi",
