@@ -6,13 +6,17 @@ var development, production;
 load("./gulp/tasks", {recurse : true});
 
 development =[
-
-];
-
-production = [
+  "compile-sass",
+  "copy-images",
+  "copy-javascripts",
   "compile-sass"
 ];
 
-gulp.task("default",config.env.IS_DEVELOPMENT ? development:production, ()=>{
-  console.log(process.env.NODE_ENV);
-});
+production = [
+  "compile-sass",
+  "copy-images",
+  "minify-javascripts",
+  "compile-sass"
+];
+
+gulp.task("default", config.env.IS_DEVELOPMENT ? development : production);
