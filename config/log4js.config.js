@@ -8,9 +8,15 @@ module.exports = {
     },
     FileLogAppender:{
       type: "file",
-      filename: path.join(ROOT, "./log/system.system.log"),
+      filename: path.join(ROOT, "./log/system/system.log"),
       maxLogSize : 5000000,
       backups: 10
+    },
+    MultFileLogAppender : {
+      type: "multitype",
+      base : path.join(ROOT, "./log/application/"),
+      property : "key",
+      extention : ".log"
     }
   },
   categories:{
@@ -20,6 +26,10 @@ module.exports = {
     },
     system: {
       appenders : ["FileLogAppender"],
+      level : "ERROR"
+    },
+    application : {
+      appenders : ["MultFileLogAppender"],
       level : "ERROR"
     }
   }
