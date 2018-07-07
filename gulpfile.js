@@ -9,7 +9,7 @@ development =[
   "compile-sass",
   "copy-images",
   "copy-javascripts",
-  "compile-sass"
+  "copy-third_party",
 ];
 
 production = [
