@@ -13,10 +13,16 @@ module.exports = {
       backups: 10
     },
     MultFileLogAppender : {
-      type: "multitype",
+      type: "multiFile",
       base : path.join(ROOT, "./log/application/"),
       property : "key",
       extention : ".log"
+    },
+    DateRollingFileAppender:{
+      type: "dateFile",
+      filename : path.join(ROOT, "./log/access/access.log"),
+      patter: "-yyyyMMdd",
+      daysToKeep: 30
     }
   },
   categories:{
@@ -31,6 +37,10 @@ module.exports = {
     application : {
       appenders : ["MultFileLogAppender"],
       level : "ERROR"
+    },
+    access :{
+      appenders :["DateRollingFileAppender"],
+      level :"INFO"
     }
   }
 };
