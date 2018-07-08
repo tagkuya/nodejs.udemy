@@ -1,0 +1,9 @@
+[2018-07-09T00:33:49.107] [ERROR] system - c:\webapp\views\posts\index.ejs:16
+    14| 
+    15|       <div class="border-bottom mt-5 mb-5">
+ >> 16|         <h1><%= title%></h1>
+    17|       </div>
+    18|       <dl class="row mt-5 mb-5">
+    19|         <dt class="col-3">公開日：</dt>
+
+title is not defined

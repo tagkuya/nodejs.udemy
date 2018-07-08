@@ -1,7 +1,7 @@
 var router = require("express").Router();
 
 router.get("/", (req,res)=>{
-  res.render("./index.ejs");
+  res.render("../views/index.ejs");
 });
 
 module.exports = router;
