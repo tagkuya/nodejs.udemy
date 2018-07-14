@@ -59,4 +59,7 @@ https://github.com/RyanZim/EJS-Lint
 
 If the above error is not helpful, you may want to try EJS-Lint:
 https://github.com/RyanZim/EJS-Lint
+<<<<<<< HEAD
 [2018-07-14T09:28:55.013] [ERROR] system - Failed to lookup view "../views/index.ejs" in views directory "c:\webapp\views"
+=======
+>>>>>>> 8cfe8911b29d007e6600b9beb1d6684b3926e97e

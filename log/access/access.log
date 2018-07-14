@@ -58,6 +58,7 @@
 [2018-07-11T23:42:33.212] [WARN] access - ::1 - - "GET /search?keyword=Node.js HTTP/1.1" 304 - "http://localhost:3000/search?keyword=Node.js%5D" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134"
 [2018-07-11T23:42:34.708] [INFO] access - ::1 - - "GET /posts/2017/05/hello-nodejs.html HTTP/1.1" 200 1636 "http://localhost:3000/search?keyword=Node.js" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134"
 [2018-07-11T23:42:38.635] [WARN] access - ::1 - - "GET /search?keyword=Node.js HTTP/1.1" 304 - "http://localhost:3000/search?keyword=Node.js%5D" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134"
+<<<<<<< HEAD
 [2018-07-14T09:28:55.020] [ERROR] access - ::1 - - "GET / HTTP/1.1" 500 1287 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134"
 [2018-07-14T09:30:26.277] [INFO] access - ::1 - - "GET / HTTP/1.1" 200 1430 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134"
 [2018-07-14T09:30:26.289] [ERROR] access - ::1 - - "GET /public/third_party/bootstrap/css/bootstrap.css HTTP/1.1" 404 185 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134"
@@ -95,3 +96,5 @@
 [2018-07-14T09:33:26.917] [ERROR] access - ::1 - - "GET /public/third_party/bootstrap/js/bootstrap.js HTTP/1.1" 404 183 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
 [2018-07-14T09:33:29.428] [ERROR] access - ::1 - - "GET /public/third_party/bootstrap/css/bootstrap.css HTTP/1.1" 404 185 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
 [2018-07-14T09:33:29.429] [ERROR] access - ::1 - - "GET /public/third_party/font-awesome/css/font-awesome.css HTTP/1.1" 404 191 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+=======
+>>>>>>> 8cfe8911b29d007e6600b9beb1d6684b3926e97e
