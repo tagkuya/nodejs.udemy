@@ -7,11 +7,11 @@ module.exports = {
     IS_DEVELOPMENT
   },
   path: {
-    root:"./",
-    log:"./log",
-    node_modules : "./node_modules",
-    input : "./public/source",
-    output : `./public/${NODE_ENV}`
+    root: "./",
+    log: "./log",
+    node_modules: "./node_modules",
+    input: "./public/source",
+    output: `./public/${NODE_ENV}`
   },
   sass: {
     outputstyle: IS_DEVELOPMENT ? "expaneded" : "compressed"
