@@ -24,7 +24,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-dev":"set NODE_ENV = development && gulp",
+    "build-pro":"set NODE_ENV = production && gulp"
   },
   "author": "",
   "license": "ISC"
