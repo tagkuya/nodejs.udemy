@@ -2,7 +2,8 @@ module.exports = {
     "env": {
         "browser": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "jquery": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -12,7 +13,7 @@ module.exports = {
         "indent": [
             "error",
             2,
-            {"SwitchCase": 1}
+            { "SwitchCase": 1 }
         ],
         "linebreak-style": [
             "error",
@@ -26,14 +27,14 @@ module.exports = {
             "error",
             "always"
         ],
-        "no-unused-vars":[
+        "no-unused-vars": [
             "error",
             {
-                "vars":"all",
-                "args":"none"
+                "vars": "all",
+                "args": "none"
             }
         ],
-        "no-console":[
+        "no-console": [
             "off"
         ]
     }

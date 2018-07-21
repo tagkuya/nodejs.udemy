@@ -108,3 +108,38 @@ title is not defined
     19|         <dt class="col-3">公開日：</dt>
 
 title is not defined
+[2018-07-21T22:13:43.614] [ERROR] system - bodr is not defined
+[2018-07-21T22:16:12.989] [ERROR] system - bodr is not defined
+[2018-07-21T22:17:04.657] [ERROR] system - Cannot read property 'url' of undefined
+[2018-07-21T22:18:48.646] [ERROR] system - Cannot read property 'url' of undefined
+[2018-07-21T22:20:09.951] [ERROR] system - Cannot read property 'url' of undefined
+[2018-07-21T22:26:28.943] [ERROR] system - Cannot read property 'url' of undefined
+[2018-07-21T22:45:12.970] [ERROR] system - c:\webapp\views\account\posts\regist-form.ejs:27
+    25|             var original = locals.original || {};
+    26|           %>
+ >> 27|           <% if (local.errors) { %>
+    28|            <% for(var key in errors) {%>
+    29|             <div><i class="fa fa-exclamation-circle fa-fw mr-2"></i><%= errors[key] %></div>
+    30|            <% } %>
+
+local is not defined
+[2018-07-21T22:45:55.855] [ERROR] system - c:\webapp\views\account\posts\regist-form.ejs:27
+    25|           <label for="url" class="col-sm-2 col-form-label">URL:</label>
+    26|           <div class="col-sm-10">
+ >> 27|             <input type="text" class="form-control <%= errors.url ? is-invalid : '' %>" id="url" name="url" value="<%= original.url %>"/>
+    28|           </div>
+    29|         </div>
+    30|         <div class="form-group row">
+
+errors is not defined
+[2018-07-21T23:08:08.439] [ERROR] system - erros is not defined
+[2018-07-21T23:08:41.974] [ERROR] system - erros is not defined
+[2018-07-21T23:09:12.300] [ERROR] system - c:\webapp\views\account\posts\regist-form.ejs:35
+    33|           <label for="url" class="col-sm-2 col-form-label">URL:</label>
+    34|           <div class="col-sm-10">
+ >> 35|             <input type="text" class="form-control <%= errors.url ? is-invalid : '' %>" id="url" name="url" value="<%= original.url %>"/>
+    36|           </div>
+    37|         </div>
+    38|         <div class="form-group row">
+
+is is not defined

@@ -3,17 +3,17 @@ var gulp = require("gulp");
 var load = require("require-dir");
 var development, production;
 
-load("./gulp/tasks", {recurse : true});
+load("./gulp/tasks", { recurse: true });
 
-development =[
-  "compile-sass",
+development = [
+  "copy-third_party",
   "copy-images",
   "copy-javascripts",
-  "copy-third_party",
+  "compile-sass"
 ];
 
 production = [
-  "compile-sass",
+  "copy-third_party",
   "copy-images",
   "minify-javascripts",
   "compile-sass"
