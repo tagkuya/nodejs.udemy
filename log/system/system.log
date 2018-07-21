@@ -63,3 +63,48 @@ https://github.com/RyanZim/EJS-Lint
 [2018-07-14T09:28:55.013] [ERROR] system - Failed to lookup view "../views/index.ejs" in views directory "c:\webapp\views"
 =======
 >>>>>>> 8cfe8911b29d007e6600b9beb1d6684b3926e97e
+[2018-07-21T20:38:56.566] [ERROR] system - c:\webapp\views\posts\index.ejs:16
+    14| 
+    15|       <div class="border-bottom mt-5 mb-5">
+ >> 16|         <h1><%= title%></h1>
+    17|       </div>
+    18|       <dl class="row mt-5 mb-5">
+    19|         <dt class="col-3">公開日：</dt>
+
+title is not defined
+[2018-07-21T20:39:49.682] [ERROR] system - c:\webapp\views\posts\index.ejs:16
+    14| 
+    15|       <div class="border-bottom mt-5 mb-5">
+ >> 16|         <h1><%= title%></h1>
+    17|       </div>
+    18|       <dl class="row mt-5 mb-5">
+    19|         <dt class="col-3">公開日：</dt>
+
+title is not defined
+[2018-07-21T20:40:44.185] [ERROR] system - c:\webapp\views\posts\index.ejs:16
+    14| 
+    15|       <div class="border-bottom mt-5 mb-5">
+ >> 16|         <h1><%= title%></h1>
+    17|       </div>
+    18|       <dl class="row mt-5 mb-5">
+    19|         <dt class="col-3">公開日：</dt>
+
+title is not defined
+[2018-07-21T20:40:48.555] [ERROR] system - c:\webapp\views\posts\index.ejs:16
+    14| 
+    15|       <div class="border-bottom mt-5 mb-5">
+ >> 16|         <h1><%= title%></h1>
+    17|       </div>
+    18|       <dl class="row mt-5 mb-5">
+    19|         <dt class="col-3">公開日：</dt>
+
+title is not defined
+[2018-07-21T20:40:54.814] [ERROR] system - c:\webapp\views\posts\index.ejs:16
+    14| 
+    15|       <div class="border-bottom mt-5 mb-5">
+ >> 16|         <h1><%= title%></h1>
+    17|       </div>
+    18|       <dl class="row mt-5 mb-5">
+    19|         <dt class="col-3">公開日：</dt>
+
+title is not defined

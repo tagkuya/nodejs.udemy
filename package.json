@@ -7,6 +7,7 @@
     "lib": "lib"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "bootstrap": "^4.1.1",
     "del": "^3.0.0",
     "ejs": "^2.5.9",
@@ -25,8 +26,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-dev":"set NODE_ENV = development && gulp",
-    "build-pro":"set NODE_ENV = production && gulp"
+    "build-dev": "set NODE_ENV = development && gulp",
+    "build-pro": "set NODE_ENV = production && gulp"
   },
   "author": "",
   "license": "ISC"
