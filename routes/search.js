@@ -1,11 +1,5 @@
-var {
-  CONNECTION_URL,
-  DATABASE,
-  OPTIONS
-} = require("../config/mongodb.config.js");
-var {
-  MAX_ITEM_PER_PAGE
-} = require("../config/app.config.js").search;
+var {  CONNECTION_URL,  DATABASE,  OPTIONS} = require("../config/mongodb.config.js");
+var {  MAX_ITEM_PER_PAGE} = require("../config/app.config.js").search;
 var router = require("express").Router();
 var MongoClient = require("mongodb").MongoClient;
 
@@ -30,9 +24,9 @@ router.get("/*", (req, res) => {
         .count(),
       db.collection("posts")
         .find(query)
-        .skip((page - 1) * MAX_ITEM_PER_PAGE)
-        .limit(MAX_ITEM_PER_PAGE)
         .sort({published: -1})
+        .skip((page - 1) * MAX_ITEM_PER_PAGE)
+        .limit(MAX_ITEM_PER_PAGE) 
         .toArray()
     ]).then((results) => {
       var data = {

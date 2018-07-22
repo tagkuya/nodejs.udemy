@@ -1,4 +1,7 @@
+var { CONNECTION_URL, DATABASE, OPTIONS } = require("../config/mongodb.config");
 var router = require("express").Router();
+var MongoClient = require("mongodb").MongoClient;
+var tokens = new require("csrf")();
 
 var validateRegistData = function (body) {
   var isValidated = true, erros = {};
@@ -30,8 +33,8 @@ var createRegistData = function (body) {
     update: datetime,
     title: body.title,
     content: body.content,
-    keywords: (body.keywords || "").split(''),
-    authors: (body.authors || "").split('')
+    keywords: (body.keywords || "").split(','),
+    authors: (body.authors || "").split(',')
   };
 };
 
@@ -40,6 +43,11 @@ router.get("/", (req, res) => {
 });
 
 router.get("/posts/regist", (req, res) => {
+  tokens.secret((error, secret) => {
+    var token = tokens.create(secret);
+    req.session._csrf = secret;
+    res.cookie("_csrf", token);
+  });
   res.render("./account/posts/regist-form.ejs");
 });
 
@@ -57,5 +65,34 @@ router.post("/posts/regist/confirm", (req, res) => {
   }
   res.render("./account/posts/regist-confirm.ejs", { original });
 });
+router.post("/posts/regist/execute", (req, res) => {
+  let secret = req.session._csrf;
+  let token = req.cookies._csrf;
 
+  if (tokens.verify(secret, token) === false) {
+    throw new Error("Invalid Token.");
+  };
+
+  let original = createRegistData(req.body);
+  var errors = validateRegistData(req.body);
+  if (errors) {
+    res.render("./account/posts/regist-form.ejs", { errors, original });
+    return;
+  }
+
+  MongoClient.connect(CONNECTION_URL, OPTIONS, (error, client) => {
+    var db = client.db(DATABASE);
+    db.collection("posts").insertOne(original)
+      .then(() => {
+        delete req.session._csrf;
+        res.clearCookie("_csrf");
+        res.render("./account/posts/regist-complete.ejs", { original });
+      }).catch(() => {
+        throw error;
+      }).then(() => {
+        client.close();
+      })
+  });
+
+});
 module.exports = router;
