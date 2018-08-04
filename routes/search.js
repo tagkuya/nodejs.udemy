@@ -7,7 +7,7 @@ router.get("/*", (req, res) => {
   var page = req.query.page ? parseInt(req.query.page) : 1;
   var keyword = req.query.keyword || "";
 
-  var regexp = new RegExp(`.* ${keyword}.*`);
+  var regexp = new RegExp(`.*${keyword}.*`);
   var query = {
     $or: [{
       title: regexp

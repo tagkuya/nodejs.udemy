@@ -16,10 +16,10 @@ app.use(accesslogger());
 
 app.use(cookieParser());
 app.use(session({
-    secret: SESSION_SECRET,
-    resave: false,
-    saveUninitialized: true,
-    name: "sid"
+  secret: SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true,
+  name: "sid"
 }));
 
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -14,7 +14,7 @@ var validateRegistData = function (body) {
   if (body.url && /^\//.test(body.url) === false) {
     isValidated = false;
     erros.url = "'/'から始まるURLを入力してください。";
-  };
+  }
 
   if (!body.title) {
     isValidated = false;
@@ -33,8 +33,8 @@ var createRegistData = function (body) {
     update: datetime,
     title: body.title,
     content: body.content,
-    keywords: (body.keywords || "").split(','),
-    authors: (body.authors || "").split(',')
+    keywords: (body.keywords || "").split(","),
+    authors: (body.authors || "").split(",")
   };
 };
 
@@ -46,9 +46,10 @@ router.get("/posts/regist", (req, res) => {
   tokens.secret((error, secret) => {
     var token = tokens.create(secret);
     req.session._csrf = secret;
-    res.cookie("_csrf", token);
+    res.cookie("_csrf", token); 
+    res.render("./account/posts/regist-form.ejs");
   });
-  res.render("./account/posts/regist-form.ejs");
+ 
 });
 
 router.post("/posts/regist/input", (req, res) => {
@@ -71,7 +72,7 @@ router.post("/posts/regist/execute", (req, res) => {
 
   if (tokens.verify(secret, token) === false) {
     throw new Error("Invalid Token.");
-  };
+  }
 
   let original = createRegistData(req.body);
   var errors = validateRegistData(req.body);
@@ -87,11 +88,11 @@ router.post("/posts/regist/execute", (req, res) => {
         delete req.session._csrf;
         res.clearCookie("_csrf");
         res.render("./account/posts/regist-complete.ejs", { original });
-      }).catch(() => {
+      }).catch((error) => {
         throw error;
       }).then(() => {
         client.close();
-      })
+      });
   });
 
 });
