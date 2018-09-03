@@ -1,4 +1,5 @@
 var { CONNECTION_URL, DATABASE, OPTIONS } = require("../config/mongodb.config");
+var {authenticate} = require("../lib/security/accountcontrol.js");
 var router = require("express").Router();
 var MongoClient = require("mongodb").MongoClient;
 var tokens = new require("csrf")();
@@ -38,9 +39,21 @@ var createRegistData = function (body) {
   };
 };
 
-router.get("/", (req, res) => {
+router.get("/",(req,res,next)=>{
+  if(req.isAuthenticated()){
+    next();
+  }else{
+    res.redirect("/account/login");
+  }
+}, (req, res) => {
   res.render("./account/index.ejs");
 });
+
+router.get("/login",(req,res)=>{
+  res.render("./account/login.ejs",{message:req.flash("message")});
+});
+
+router.post("/login",authenticate());
 
 router.get("/posts/regist", (req, res) => {
   tokens.secret((error, secret) => {
