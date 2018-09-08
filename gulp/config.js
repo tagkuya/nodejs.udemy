@@ -14,7 +14,7 @@ module.exports = {
     output: `./public/${NODE_ENV}`
   },
   sass: {
-    outputstyle: IS_DEVELOPMENT ? "expaneded" : "compressed"
+    outputStyle: IS_DEVELOPMENT ? "expanded" : "compressed"
   },
   uglify: {
 

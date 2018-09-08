@@ -10,6 +10,7 @@
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.1",
     "connect-flash": "^0.1.1",
+    "connect-mongo": "^2.0.1",
     "cookie-parser": "^1.4.3",
     "csrf": "^3.0.6",
     "del": "^3.0.0",
@@ -24,6 +25,7 @@
     "jquery": "^3.3.1",
     "js": "^0.1.0",
     "log4js": "^2.5.3",
+    "mongo-express": "https://github.com/andzdroid/mongo-express/tarball/master",
     "mongodb": "^3.0.11",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
@@ -33,8 +35,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-dev": "set NODE_ENV = development && gulp",
-    "build-pro": "set NODE_ENV = production && gulp"
+    "build-dev": "set NODE_ENV=development && gulp",
+    "build-prod": "set NODE_ENV=production && gulp"
   },
   "author": "",
   "license": "ISC"
